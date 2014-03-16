@@ -11,6 +11,9 @@ class Documentation {
 	private $Docs = NULL;
 
 	public function __construct() {
+        // array of files ~ paths (docs)
+        // exmple :
+        //    '1' => '../docs/initializing.html' 
 		$this->Docs = array(
 			'1' => '',
 			'2' => ''
