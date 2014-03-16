@@ -21,9 +21,14 @@ class CommandLine extends Git {
 	 * @author Hachem Zerdia
 	 **/
 	public function execCommand($command,$numOfChallenge) {
-		$commandExec = $this->explodeCommand($command);
-
-		if($this->checkCommand($commandExec,$numOfChallenge) === true) {
+        // Explode command for testing.
+        $commandExec = $this->explodeCommand($command);
+        // Test command if it's valid.
+        $isCommandValid = $this->checkCommand($commandExec,$numOfChallenge); 
+        
+        // If command is valid run 1 of functions below,
+        // and nubmer or chalange status is into account.
+		if($isCommandValid === true) {
 			switch ($numOfChallenge) {
 			case 1: 
 				$this->updateStatus();
