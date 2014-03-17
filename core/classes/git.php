@@ -117,7 +117,8 @@ class Git {
 						# <br/>
 						# Initial commit <br/>
 						# <br/>
-						nothing to commit (create/copy files and use "git add" to track) <br/>
+                    nothing to commit (create/copy files and use "git add" 
+                    to track) <br/>
 
 						<span class="success" >Success!</span>
 					</p>
@@ -132,10 +133,12 @@ class Git {
 						# Initial commit <br/>
 						# <br/>
 						# Untracked files: <br/>
-						#   (use "git add <file>..." to include in what will be committed) <br/>
+                        # (use "git add <file>..." 
+                        to include in what will be committed) <br/>
 						# <br/>
 						#	<span style="color: #F00">octocat.txt</span> <br/>
-						nothing added to commit but untracked files present (use "git add" to track) <br/>
+                        nothing added to commit but untracked files present 
+                        (use "git add" to track) <br/>
 
 						<span class="success" >Success!</span>
 					</p>
@@ -152,7 +155,8 @@ class Git {
 						# Changes to be committed: <br/>
 						#   (use "git rm --cached <file>..." to unstage) <br/>
 						# <br/>
-						#	<span style="color: #0F0;">new file:   octocat.txt</span> <br/>
+                        # <span style="color: #0F0;">new file:   octocat.txt
+                        </span> <br/>
 						# <br/>
 					
 
@@ -174,7 +178,8 @@ class Git {
 			$message = '
 				<div class="resultOfCommand">
 					<p>
-						<span style="color:#0F0;">Nice job, you\'ve added octocat.txt to the Staging Area</span>
+                        <span style="color:#0F0;">Nice job, you\'ve added 
+                        octocat.txt to the Staging Area</span>
 					</p>
 				</div>	
 			';
@@ -200,7 +205,8 @@ class Git {
 			$message = '
 				<div class="resultOfCommand">
 					<p>
-						[master (root-commit) 20b5ccd] Add cute octocat story <br/>
+                        [master (root-commit) 20b5ccd] Add cute octocat story 
+                        <br/>
 						 1 file changed, 1 insertion(+) <br/>
 						 create mode 100644 octocat.txt <br/>
 
@@ -257,13 +263,15 @@ class Git {
 						Author: Try Git <try_git@github.com> <br/>
 						Date:   Sat Oct 10 08:30:00 2020 -0500 <br/>
 
-						    <span style="margin-left: 25px;display:block;">Add all the octocat txt files</span>
+                            <span style="margin-left: 25px;display:block;">
+                            Add all the octocat txt files</span>
 
 						commit b652edfd888cd3d5e7fcb857d0dabc5a0fcb5e28 <br/>
 						Author: Try Git <try_git@github.com> <br/>
 						Date:   Sat Oct 10 08:30:00 2020 -0500 <br/>
 
-						    <span style="margin-left: 25px;display:block;">Added cute octocat story</span>
+                            <span style="margin-left: 25px;display:block;">
+                            Added cute octocat story</span>
 
 						<span class="success" >Success!</span>
 					</p>
@@ -301,7 +309,8 @@ class Git {
 			$message = '
 				<div class="resultOfCommand">
 					<p>
-						Branch master set up to track remote branch master from origin. <br />
+                        Branch master set up to track remote branch master 
+                        from origin. <br />
 						<span style="color:#0F0;margin: 20px;">Success!</span>
 					</p>
 				</div>	
@@ -359,8 +368,10 @@ class Git {
 						--- a/octocat.txt <br />
 						+++ b/octocat.txt <br />
 						<span style="color: #12D0FF;">@@ -1 +1 @@</span> <br />
-						<span style="color: #F00;">-A Tale of Two Octocats</span> <br />
-						<span style="color: #0F0;">+[mA Tale of Two Octocats and an Octodog</span> <br />
+                        <span style="color: #F00;">-A Tale of Two Octocats
+                        </span> <br />
+                        <span style="color: #0F0;">+[mA Tale of Two Octocats 
+                        and an Octodog</span> <br />
 
 						<span class="success" >Success!</span>
 					</p>
@@ -370,12 +381,14 @@ class Git {
 			$message = '
 				<div class="resultOfCommand">
 					<p>
-						diff --git a/octofamily/octodog.txt b/octofamily/octodog.txt <br />
+                        diff --git a/octofamily/octodog.txt 
+                        b/octofamily/octodog.txt <br />
 						new file mode 100644 <br />
 						index 0000000..cfbc74a <br />
 						--- /dev/null <br />
 						+++ b/octofamily/octodog.txt <br />
-						<span style="color: #12D0FF;">@@ -0,0 +1 @@</span> <br />
+                        <span style="color: #12D0FF;">@@ -0,0 +1 @@</span>
+                        <br />
 						<span style="color: #0F0;">+[mwoof</span> <br />
 
 						<span class="success" >Success!</span>

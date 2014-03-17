@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * This is Challenge class. 
  *
@@ -20,12 +21,16 @@ class Challenge {
 	 *
 	 * @param $answer {string} it's a command submited by user.
 	 * @param $numOfChallenge {int} challenge number.
-	 * @return {string} challenge result.
+	 * @return {array:string} challenge result && documentation.
 	 * @author Hachem Zerdia
 	 **/
 	public function startChallenge($answer,$numOfChallenge) {
 		$results = array();
-		$results['CommandResult'] =  $this->commandline->execCommand($answer,$numOfChallenge);
+        // run command and wait 
+        // for resulat of command 
+        $results['CommandResult'] =  $this->commandline->execCommand($answer
+            ,$numOfChallenge);
+
 			if($results['CommandResult'] === false) {
 			    $results['CommandResult'] = '
 						<div class="resultOfCommand">
@@ -39,9 +44,13 @@ class Challenge {
 						</div>	
 					';
 			} else {
-			    $results['DocOfChallenge'] = $this->doc->getDoc($numOfChallenge + 1);
+                // if command not valid this code not exec 
+                // && this code update documenation of chalange.
+                $results['DocOfChallenge'] = $this->doc->getDoc(
+                    $numOfChallenge + 1);
 			}
 
+        // return command result && documentation of next chalange
 		return $results;
 	}
 
