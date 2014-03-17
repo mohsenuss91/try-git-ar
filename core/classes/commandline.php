@@ -26,8 +26,8 @@ class CommandLine extends Git {
         // Test command if it's valid.
         $isCommandValid = $this->checkCommand($commandExec,$numOfChallenge); 
         
-        // If command is valid run 1 of functions below,
-        // and nubmer or chalange status is into account.
+        // If command is valid run 1 of cases below,
+        // and nubmer or challenge status is into account.
 		if($isCommandValid === true) {
 			switch ($numOfChallenge) {
 			case 1: 

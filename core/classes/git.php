@@ -8,8 +8,10 @@
  **/
 
 class Git {
-
-	protected $gitCommands = NULL;
+    
+    // array of git commands.
+    protected $gitCommands = NULL;
+    // array of git flags. 
 	protected $gitFlags = NULL;
 
 	public function __construct() {

@@ -8,7 +8,9 @@
  * @author Hachem Zerdia
  **/
 class Challenge {
-	private $commandline = NULL;
+    // object from CommandLine class.
+    private $commandline = NULL;
+    // object from Documentation class.
 	private $doc = NULL;
 
 	public function __construct() {
@@ -30,7 +32,9 @@ class Challenge {
         // for resulat of command 
         $results['CommandResult'] =  $this->commandline->execCommand($answer
             ,$numOfChallenge);
-
+            
+            // if result (command not valid) assgin the message below 
+            // to the result  
 			if($results['CommandResult'] === false) {
 			    $results['CommandResult'] = '
 						<div class="resultOfCommand">
@@ -45,12 +49,12 @@ class Challenge {
 					';
 			} else {
                 // if command not valid this code not exec 
-                // && this code update documenation of chalange.
+                // && this code update documenation of challenge.
                 $results['DocOfChallenge'] = $this->doc->getDoc(
                     $numOfChallenge + 1);
 			}
 
-        // return command result && documentation of next chalange
+        // return command result && documentation of next challenge.
 		return $results;
 	}
 
