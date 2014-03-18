@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var command = $('.commandField');
 	var ioObject = new IO(); // create IO obeject.
 	challengeStatus(); // update status bar.
+    updateChallengeName(); // update challenge name in top bar
 
 	// get command when user press enter.
 	command.keyup(function(event){

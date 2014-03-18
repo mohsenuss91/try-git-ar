@@ -1,4 +1,25 @@
 /**
+ * This is an object store (challenge names). 
+ * PS: challenge name should be in arabic.
+ * @author Hachem Zerdia
+ **/
+var challengeName = {
+    1 : "Initializing",
+    2 : "Checking the Status"
+}
+
+/**
+ * This function updating challenge name. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function updateChallengeName() {
+	var numOfChallenge = ($.cookies.get("numOfChallenge"));
+    var nameOfChallenge = '<p>' + challengeName[numOfChallenge] + '</p>';
+    $('#challengeName').html(nameOfChallenge);
+}
+
+/**
  * This function updating challenge status bar. 
  * @return void
  * @author Hachem Zerdia
@@ -63,5 +84,6 @@ function IO() {
 		$('.commandField').val('');
 		$('#documentation').html(this.Documentation);  
 	    challengeStatus();
+        updateChallengeName();
 	}
 }

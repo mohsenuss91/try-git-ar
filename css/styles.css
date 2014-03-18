@@ -61,6 +61,19 @@ body {
 	border-radius: 90px;
 	background-color: #eee;
 }
+#challengeName {
+    float: left;
+    width: 14%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#challengeName p {
+    width: 100%;
+    text-align: center;
+    color: #222;
+}
 
 /*****************************************************
  *	Content 
