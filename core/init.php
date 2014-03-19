@@ -1,7 +1,7 @@
 <?php
 
+    define('CORE_APP',realpath("./")."/core");
 
-	require_once 'classes/git.php';
-	require_once 'classes/commandline.php'; 
-	require_once 'classes/documentation.php';
-	require_once 'classes/challenge.php';
+    function __autoload($className) {
+        require_once CORE_APP . '/classes/' . $className . '.php';
+    }
