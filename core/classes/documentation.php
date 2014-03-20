@@ -25,7 +25,10 @@ class Documentation {
 	 * @author Hachem Zerdia
 	 **/
 	public function getDoc($numOfChallenge) {
-		return file_get_contents($this->Docs[$numOfChallenge]);
+        if (!empty($this->Docs[$numOfChallenge]))
+		    return file_get_contents($this->Docs[$numOfChallenge]);
+        else
+            return null;
 	}
 
 	function __destruct() {
