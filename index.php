@@ -1,10 +1,8 @@
 <?php
-	
 	$expire = time() + 60*60*2; // 2h.
 	if(!isset($_COOKIE['numOfChallenge'])) {
 		setcookie('numOfChallenge',1,$expire);
 	}
-
 ?>
 
 <!doctype html>
@@ -15,6 +13,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Hachem Zerdia">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -59,9 +58,7 @@
                 <?php include_once 'doc.php'; ?>
 			</div>
 			<div id="commandLine">
-				<div id="terminal">
-					<?php include_once 'terminal.php'; ?>
-				</div>
+				<textarea name="terminal" id="terminal" dir="rtl"></textarea>
 				<div id="tips">
 					<div id="advice" >
 					</div>
@@ -74,6 +71,7 @@
 	</div>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery.cookies.2.2.0.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.js"></script>
 	<script src="js/io.js"></script>
 	<script src="js/scripts.js"></script>
 

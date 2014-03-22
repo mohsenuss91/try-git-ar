@@ -15,4 +15,11 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+    // code mirror call
+	var editor = CodeMirror.fromTextArea(document.getElementById('terminal'), {
+            mode: 'shell',
+            lineNumbers: true,
+            matchBrackets: true
+          });
 });
