@@ -1,5 +1,11 @@
 <?php
-    
+
+    /**
+     * This script run when the cercle is clicked.
+     *
+     * @file changeChallenge.php
+     */    
+
     include_once 'core/init.php';
     // num of challenge submitted.    
     $numOfChallenge = (int) $_POST['numOfChallenge'];
