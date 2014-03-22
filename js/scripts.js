@@ -20,6 +20,6 @@ $(document).ready(function(){
 	var editor = CodeMirror.fromTextArea(document.getElementById('terminal'), {
             mode: 'shell',
             lineNumbers: true,
-            matchBrackets: true
+            theme: 'night'
           });
 });
