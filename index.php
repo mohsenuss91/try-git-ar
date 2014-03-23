@@ -13,7 +13,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="Hachem Zerdia">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.css">
+<!--	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.css">-->
+	<link rel="stylesheet" href="css/cs_console.css">
 	<link rel="stylesheet" href="css/codemirror-local.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
@@ -59,7 +60,7 @@
                 <?php include_once 'doc.php'; ?>
 			</div>
 			<div id="commandLine">
-				<textarea name="terminal" id="terminal" dir="rtl"></textarea>
+				<div name="terminal" id="terminal"></div>
 				<div id="tips">
 					<div id="advice" >
 					</div>
@@ -72,7 +73,8 @@
 	</div>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery.cookies.2.2.0.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.js"></script>
+<!--	<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.js"></script>-->
+	<script src="js/cs_console.js"></script>
 	<script src="js/io.js"></script>
 	<script src="js/scripts.js"></script>
 
