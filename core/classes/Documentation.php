@@ -15,7 +15,7 @@ class Documentation {
 
 	public function __construct() {
 		$this->Docs = array(
-			'1' => '',
+			'1' => 'docs/initializing.html',
 			'2' => ''
 		);
 	}

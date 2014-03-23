@@ -13,9 +13,21 @@ var challengeName = {
  * @return void
  * @author Hachem Zerdia
  **/
-function updateChallengeName() {
+function updateChallengeName_() {
 	var numOfChallenge = ($.cookies.get("numOfChallenge"));
     var nameOfChallenge = '<p>' + challengeName[numOfChallenge] + '</p>';
+    $('#challengeName').html(nameOfChallenge);
+}
+
+/**
+ * This function updating challenge name. 
+ * @param numOfChallenge {int} number of challenge.
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function updateChallengeName(numOfChallenge) {
+	var numOfChallenge_ = numOfChallenge;
+    var nameOfChallenge = '<p>' + challengeName[numOfChallenge_] + '</p>';
     $('#challengeName').html(nameOfChallenge);
 }
 
@@ -25,12 +37,48 @@ function updateChallengeName() {
  * @author Hachem Zerdia
  **/
 function challengeStatus() {
-	var numOfChallenge = ($.cookies.get("numOfChallenge") - 1);
-	for (i = 0; i < numOfChallenge; i++) {
-		$('#challengeStatus li:eq('+i+') a')
-            .css("background-color","rgba(0,0,0,0.3)");
+	var numOfChallenge = ($.cookies.get("numOfChallenge"));
+	for (i = 0; i < 26; i++) {
+        if(i < numOfChallenge)
+    		$('#challengeStatus li:eq('+i+') a')
+                .css("background-color","rgba(0,0,0,0.3)");
+        else
+    		$('#challengeStatus li:eq('+i+') a')
+                .css("background-color","rgba(255,255,255,1)");
 	}
 }
+
+/**
+ * This function updating status && name of challenge in the top bar. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function updateBar() {
+    updateChallengeName_(); 
+    challengeStatus();
+}
+
+/**
+ * This function change challenge && updating status bar (num of challenge) 
+ * && the documentation. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function changeChallenge(numOfChallenge_) {
+    $.ajax({
+        type: "POST",
+        url: "changeChallenge.php",
+        data: {numOfChallenge:numOfChallenge_},
+        dataType: "json",
+        success: function(data) {
+            updateBar();
+            var documentation = data["docOfChallenge"];   
+		    $('#documentation').html(documentation);  
+        }  
+    });
+}
+
+
 
 /**
  * This IO class.
@@ -83,7 +131,6 @@ function IO() {
 		$('#commandHistory').append(result);
 		$('.commandField').val('');
 		$('#documentation').html(this.Documentation);  
-	    challengeStatus();
-        updateChallengeName();
+        updateBar();
 	}
 }

@@ -25,31 +25,31 @@
 				<img src="images/logo.png" >
 			</div>
 			<ul id="challengeStatus">
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
-				<li><a href="#" > </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="1"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="2"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="3"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="4"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="5"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="6"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="7"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="8"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="9"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="10"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="11"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="12"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="13"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="14"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="15"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="16"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="17"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="18"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="19"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="20"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="21"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="23"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="24"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="25"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="26"> </a></li>
 			</ul>
             <div id="challengeName">
             </div>

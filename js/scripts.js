@@ -1,9 +1,9 @@
 
 $(document).ready(function(){
 	var command = $('.commandField');
+    var challenge_ = $('#challengeStatus li a');
 	var ioObject = new IO(); // create IO obeject.
-	challengeStatus(); // update status bar.
-    updateChallengeName(); // update challenge name in top bar
+    updateBar();
 
 	// get command when user press enter.
 	command.keyup(function(event){
@@ -15,20 +15,31 @@ $(document).ready(function(){
 			}
 		}
 	});
-/*
-    // code mirror call
-	var editor = CodeMirror.fromTextArea(document.getElementById('terminal'), {
-            mode: 'shell',
-            lineNumbers: true,
-            theme: 'night'
-          });
-*/
+    
+    // when the mouse over the cercl of challenge.
+    challenge_.hover(function() {
+            // get number of challenge.
+            var numOfChallenge  = $(this).data('num-of-challenge');
+            // show the name of challenge in the challenge name.
+            updateChallengeName(numOfChallenge);
+        },
+        function() {
+            // and if the mouse is out name of challenge become 
+            // the current challenge.
+            updateChallengeName_(); 
+    });
+
+    // when the cercle clicked the challenge changed.
+    challenge_.click(function() {
+        var numOfChallenge = $(this).data('num-of-challenge');
+        changeChallenge(numOfChallenge);
+    });
 });
     var el = document.getElementById('terminal');
           window.cs_console = new CSConsole(el,{
                       prompt: '> ',
                       historyLabel: 'cs-console-demo',
-                      syntax: 'javascript',
+                      syntax: 'shell',
                       welcomeMessage: 'Welcome to the cs console demo, type some javascript',
                       autoFocus: true,
                       commandValidate: function(line){
