@@ -1,5 +1,6 @@
 .CodeMirror {
     direction: ltr;
-    width: 900px;
     float: left;
+    width: 900px;
+    height: 325px;
 }
