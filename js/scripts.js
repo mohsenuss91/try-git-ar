@@ -34,13 +34,13 @@ $(document).ready(function(){
         var numOfChallenge = $(this).data('num-of-challenge');
         changeChallenge(numOfChallenge);
     });
-});
+    
     var el = document.getElementById('terminal');
           window.cs_console = new CSConsole(el,{
                       prompt: '> ',
-                      historyLabel: 'cs-console-demo',
+                      historyLabel: 'cs-console-git',
                       syntax: 'shell',
-                      welcomeMessage: 'Welcome to the cs console demo, type some javascript',
+                      welcomeMessage: 'Git باللغة العربية!',
                       autoFocus: true,
                       commandValidate: function(line){
                                     return line.length > 0
@@ -52,12 +52,14 @@ $(document).ready(function(){
                                      *                         This is where you might send the input to the server and get a response
                                      *                                     for example, an irb response or you could eval javascript here.
                                      *                                               */
-                                    try {
-                                                    var content = eval.call(this,line)
-                        } catch(e){
-                                        var content = e.message
-                        }
-                                              report({content: (content ? content.toString() : '')})
-                                                          }
+                            try {
+                               //var content = eval.call(this,line)
+                            } catch(e){
+                               var content = e.message
+                            }
+                            report({content: (content ? content.toString() : '')})
+                       }
                 });
+
+});
 
