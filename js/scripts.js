@@ -57,7 +57,6 @@ $(document).ready(function(){
                                 ioObject.inputCommand(valueOfCommand);
                                 var content = ioObject.getResult();
                                //var content = eval.call(this,line)
-                               alert(content);
                             } catch(e){
                                var content = e.message
                             }
