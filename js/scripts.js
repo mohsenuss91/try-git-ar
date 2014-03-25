@@ -6,15 +6,15 @@ $(document).ready(function(){
     updateBar();
 
 	// get command when user press enter.
-	command.keyup(function(event){
-		var valueOfCommand = $.trim(command.val()); //delete "space character".
-		if(valueOfCommand.length != 0) {
-			if(event.KeyCode == 13 || event.which == 13) { // Key Code of "Enter" is 13.
-				ioObject.inputCommand(valueOfCommand); // call function member.
-				event.preventDefault();
-			}
-		}
-	});
+//  command.keyup(function(event){
+//  	var valueOfCommand = $.trim(command.val()); //delete "space character".
+//  	if(valueOfCommand.length != 0) {
+//  		if(event.KeyCode == 13 || event.which == 13) { // Key Code of "Enter" is 13.
+//  			ioObject.inputCommand(valueOfCommand); // call function member.
+//  			event.preventDefault();
+//  		}
+//  	}
+//  });
     
     // when the mouse over the cercl of challenge.
     challenge_.hover(function() {
@@ -53,7 +53,11 @@ $(document).ready(function(){
                                      *                                     for example, an irb response or you could eval javascript here.
                                      *                                               */
                             try {
+                                var valueOfCommand = $.trim(line); //delete "space character".
+                                ioObject.inputCommand(valueOfCommand);
+                                var content = ioObject.getResult();
                                //var content = eval.call(this,line)
+                               alert(content);
                             } catch(e){
                                var content = e.message
                             }

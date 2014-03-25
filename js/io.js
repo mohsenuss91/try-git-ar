@@ -109,6 +109,7 @@ function IO() {
 		$.ajax({
 			type: "POST",
 			url: "challenge.php",
+            async: false,
 			data: {command:arg_command},
 			dataType: "json",
 			success: function(data){
@@ -125,12 +126,16 @@ function IO() {
 	 * @author Hachem Zerdia
 	 **/
 	this.showResult = function showResult() {
-		var result = '<div class="result"> <span class="commandExec">> ' 
-            + this.command + '</span>' + this.resultOfCommand + '</div>';
-
-		$('#commandHistory').append(result);
-		$('.commandField').val('');
+//  	var result = '<div class="result"> <span class="commandExec">> ' 
+//          + this.command + '</span>' + this.resultOfCommand + '</div>';
+//  
+//  	$('#commandHistory').append(result);
+//  	$('.commandField').val('');
 		$('#documentation').html(this.Documentation);  
         updateBar();
 	}
+
+    this.getResult = function getResult() {
+        return this.resultOfCommand;
+    }
 }
