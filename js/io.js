@@ -78,7 +78,18 @@ function changeChallenge(numOfChallenge_) {
     });
 }
 
-
+/**
+ * This function check if the command is git command.
+ * @return boolean
+ * @author Hachem Zerdia
+ **/
+function isGitCommand(command) {
+    var splitCommand = command.split(' ');
+    if(splitCommand[0] === 'git')
+        return true;
+    else
+        return false;
+}
 
 /**
  * This IO class.
@@ -127,7 +138,7 @@ function IO() {
 	 * @return void
 	 * @author Hachem Zerdia
 	 **/
-	this.showResult = function showDocumentation() {
+	this.showDocumentation = function showDocumentation() {
 		$('#documentation').html(this.Documentation);  
         updateBar();
 	}

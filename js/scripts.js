@@ -2,7 +2,7 @@ $(document).ready(function(){
     var challenge_ = $('#challengeStatus li a');
 	var ioObject = new IO(); // create IO obeject.
     updateBar();
-
+    
     // when the mouse over the cercl of challenge.
     challenge_.hover(function() {
             // get number of challenge.
@@ -44,11 +44,19 @@ $(document).ready(function(){
                  *                                               
                  */
                 try {
+
                     var valueOfCommand = $.trim(line); // delete "space character".
-                    // send command to the server for test it.
-                    ioObject.inputCommand(valueOfCommand);
-                    // get the result come in from the server.
-                    var content = ioObject.getResult();
+                    // check if the command is Git comand
+                    // else run cs_console like js console
+                    if(isGitCommand(valueOfCommand)) {
+                        // send command to the server for test it.
+                        ioObject.inputCommand(valueOfCommand);
+                        // get the result come in from the server.
+                        var content = ioObject.getResult();
+                    } else {
+                        var content = eval.call(this,line);
+                    }
+
                 } catch(e){
                    var content = e.message
                 }
