@@ -112,29 +112,31 @@ function IO() {
             async: false,
 			data: {command:arg_command},
 			dataType: "json",
-			success: function(data){
-		                 self.resultOfCommand = data["CommandResult"];
-                		 self.Documentation = data["DocOfChallenge"];   
-		                 self.showResult();
+			success: function(data) {
+                         // result come in from the server.
+                         self.resultOfCommand = data["CommandResult"];
+                         // documentation come in from the server.
+                         self.Documentation = data["DocOfChallenge"];   
+                         self.showDocumentation();
        			}
 		});
 	}
 
 	/**
-	 * This function showing the result comme in form the server. 
+	 * This function showing the documentation comme in form the server. 
 	 * @return void
 	 * @author Hachem Zerdia
 	 **/
-	this.showResult = function showResult() {
-//  	var result = '<div class="result"> <span class="commandExec">> ' 
-//          + this.command + '</span>' + this.resultOfCommand + '</div>';
-//  
-//  	$('#commandHistory').append(result);
-//  	$('.commandField').val('');
+	this.showResult = function showDocumentation() {
 		$('#documentation').html(this.Documentation);  
         updateBar();
 	}
 
+	/**
+	 * This function return the result comme in form the server. 
+	 * @return string
+	 * @author Hachem Zerdia
+	 **/
     this.getResult = function getResult() {
         return this.resultOfCommand;
     }
