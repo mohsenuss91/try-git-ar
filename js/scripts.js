@@ -37,32 +37,31 @@ $(document).ready(function(){
     
     var el = document.getElementById('terminal');
           window.cs_console = new CSConsole(el,{
-                      prompt: '> ',
-                      historyLabel: 'cs-console-git',
-                      syntax: 'shell',
-                      welcomeMessage: 'Git باللغة العربية!',
-                      autoFocus: true,
-                      commandValidate: function(line){
-                                    return line.length > 0
-                      },
-                      commandHandle: function(line, report, prompt){
-                                    /*
-                                     *             We aren't doing anything with the console input.
-                                     *
-                                     *                         This is where you might send the input to the server and get a response
-                                     *                                     for example, an irb response or you could eval javascript here.
-                                     *                                               */
-                            try {
-                                var valueOfCommand = $.trim(line); //delete "space character".
-                                ioObject.inputCommand(valueOfCommand);
-                                var content = ioObject.getResult();
-                               //var content = eval.call(this,line)
-                            } catch(e){
-                               var content = e.message
-                            }
-                            report({content: (content ? content.toString() : '')})
-                       }
-                });
+              prompt: '> ',
+              historyLabel: 'cs-console-git',
+              syntax: 'shell',
+              welcomeMessage: 'Git باللغة العربية!',
+              autoFocus: true,
+              commandValidate: function(line){
+                            return line.length > 0
+              },
+              commandHandle: function(line, report, prompt){
+                /*
+                 *             We aren't doing anything with the console input.
+                 *
+                 *                         This is where you might send the input to the server and get a response
+                 *                                     for example, an irb response or you could eval javascript here.
+                 *                                               */
+                try {
+                    var valueOfCommand = $.trim(line); //delete "space character".
+                    ioObject.inputCommand(valueOfCommand);
+                    var content = ioObject.getResult();
+                } catch(e){
+                   var content = e.message
+                }
+                report({content: (content ? content.toString() : '')})
+           }
+        });
 
 });
 
