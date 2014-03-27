@@ -64,7 +64,7 @@ body {
 }
 #challengeName {
     float: left;
-    width: 14%;
+    width: 13.5%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -129,133 +129,6 @@ body {
 	border-radius: 3px;
 
 }
-
-
-
-/*****************************************************
- *	Terminal 
- *****************************************************/
-#terminalWindow {
-	width: 95%;
-	float: left;
-	border: solid 1px #ddd;
-	-moz-box-shadow: 0 0 30px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 0 30px rgba(0,0,0,0.3);
-	box-shadow: 0 0 30px rgba(0,0,0,0.3);
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-}
-
-#terminalWindow #titleBar {
-	width: 100%;
-	height: 25px;
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-}
-
-#titleBar #closeWindow {
-	width: 16px;
-	height: 16px;
-	position: relative;
-	top: 4px;
-	left: 4px;
-}
-
-#titleBar #fullScreen {
-	width: 16px;
-	height: 16px;
-	float: right;
-	margin-top: 4px;
-	margin-right: 4px;
-}
-
-#titleBar #terminalTitle {
-	width: 30%;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	display: inline-block;
-	position: relative;
-	top: 0px;
-	left: 33%;
-	text-align: center;
-	font-family: inherit;
-}
-
-#terminalWindow #terminalBody {
-	width: 100%;
-	height: 300px;
-	background-color: #002b36;
-	overflow: auto;
-}
-
-#ps {
-	width: 100%;
-	height: 30px;
-	text-indent: 5%;
-	color: #ddd;
-	margin: 10px 0;
-}
-
-.command {
-	width: 95%;
-	height: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 30px;
-}
-
-.dollar {
-	width: 5%;
-	height: 20px;
-	color: #ddd;
-	font-size: inherit;
-}
-
-.commandField {
-	width: 95%;
-	height: 100%;
-	border: none;
-	background-color: #002b36;
-	color: #ddd;
-	outline: none;
-	font-size: inherit;
-	font-family: inherit;
-}
-
-#commandHistory {
-	width: 95%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-	display: inline-block;
-	font-size: inherit;
-	font-family: inherit;
-}
-
-.resultOfCommand {
-    width: 95%;
-    display: inline-block;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.resultOfCommand p {
-    width: 100%;
-    margin: 0px;
-    display: inline-block;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
-    color: #ddd;
-}
-
 
 /*****************************************************
  *	Footer 
