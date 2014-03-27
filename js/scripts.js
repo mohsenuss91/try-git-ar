@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	var command = $('.commandField');
     var challenge_ = $('#challengeStatus li a');
@@ -34,7 +33,10 @@ $(document).ready(function(){
         var numOfChallenge = $(this).data('num-of-challenge');
         changeChallenge(numOfChallenge);
     });
-    
+
+    /**
+     * Generate CodeMirror and apply it to #terminal element
+     */
     var el = document.getElementById('terminal');
           window.cs_console = new CSConsole(el,{
               prompt: '> ',
@@ -43,15 +45,16 @@ $(document).ready(function(){
               welcomeMessage: 'Git باللغة العربية!',
               autoFocus: true,
               commandValidate: function(line){
-                            return line.length > 0
+                return line.length > 0
               },
               commandHandle: function(line, report, prompt){
                 /*
-                 *             We aren't doing anything with the console input.
+                 *  We aren't doing anything with the console input.
                  *
-                 *                         This is where you might send the input to the server and get a response
-                 *                                     for example, an irb response or you could eval javascript here.
-                 *                                               */
+                 *  This is where you might send the input to the server and get a response
+                 *  for example, an irb response or you could eval javascript here.
+                 *                                               
+                 */
                 try {
                     var valueOfCommand = $.trim(line); //delete "space character".
                     ioObject.inputCommand(valueOfCommand);
@@ -62,6 +65,5 @@ $(document).ready(function(){
                 report({content: (content ? content.toString() : '')})
            }
         });
-
 });
 

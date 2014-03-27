@@ -36,7 +36,8 @@ class Challenge {
             // if result (command not valid) assgin the message below 
             // to the result  
 			if($results['CommandResult'] === false) {
-			    $results['CommandResult'] = '
+                /*
+                $results['CommandResult'] = '
 						<div class="resultOfCommand">
 							<p>
 								<span style="color:#F00;">
@@ -46,7 +47,11 @@ class Challenge {
 								</span>
 							</p>
 						</div>	
-					';
+                        ';
+                 */
+                $results['CommandResult'] = '<div class="resultOfCommand"><p><span style="color:#F00;">Please, follow challenge steps. <br/>Or';
+                $results['CommandResult'] .= '<br/>Command submitted is wrong.</span></p></div>';
+
 			} else {
                 // if command not valid this code not exec 
                 // && this code update documenation of challenge.
