@@ -36,7 +36,6 @@ class Challenge {
             // if result (command not valid) assgin the message below 
             // to the result  
 			if($results['CommandResult'] === false) {
-                /*
                 $results['CommandResult'] = '
 						<div class="resultOfCommand">
 							<p>
@@ -48,16 +47,16 @@ class Challenge {
 							</p>
 						</div>	
                         ';
-                 */
-                $results['CommandResult'] = '<div class="resultOfCommand"><p><span style="color:#F00;">Please, follow challenge steps. <br/>Or';
-                $results['CommandResult'] .= '<br/>Command submitted is wrong.</span></p></div>';
-
 			} else {
                 // if command not valid this code not exec 
                 // && this code update documenation of challenge.
                 $results['DocOfChallenge'] = $this->doc->getDoc(
                     $numOfChallenge + 1);
 			}
+
+        // delete new lines for making result compatible with cs_console.
+        $results['CommandResult'] = preg_replace('/\s\s+/', '', 
+                $results['CommandResult']); 
 
         // return command result && documentation of next challenge.
 		return $results;
