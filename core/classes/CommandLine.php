@@ -164,8 +164,12 @@ class CommandLine extends Git {
         $isGitCommand = ($command[1] === $this->gitCommands[$numOfChallenge])
             ? true : false;
 
-        $isGitFlag = (isset($command[2]) === $this->gitFlags[$numOfChallenge])
-            ? true : false;
+        if(isset($command[2]))
+            $isGitFlag = ($command[2] === $this->gitFlags[$numOfChallenge])
+                ? true : false;
+        else 
+            $isGitFlag = true;
+
 
         if ($isGit && $isGitCommand && $isGitFlag)
 			return true;
