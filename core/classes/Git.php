@@ -27,10 +27,10 @@ class Git {
 			'9' => 'log',
 			'10' => 'remote',
 			'11' => 'push',
-			'11' => 'pull',
-			'12' => 'diff',
-			'13' => 'add',
-			'14' => 'diff',
+			'12' => 'pull',
+			'13' => 'diff',
+			'14' => 'add',
+			'15' => 'diff',
 			'16' => 'reset',
 			'17' => 'checkout',
 			'18' => 'branch',
@@ -44,21 +44,21 @@ class Git {
 		);
 
 		$this->gitFlags = array(
-			'1' => '',
-			'2' => '',
-			'3' => '',
+			'1' => false,
+			'2' => false,
+			'3' => false,
 			'4' => 'octocat.txt',
-			'5' => '',
+			'5' => false,
 			'6' => '-m "Add octocat story"',
 			'7' => '\'*.txt\'',
 			'8' => '-m \'Add all the octocat txt files\'',
-			'9' => '',
+			'9' => false,
 			'10' => 'add origin https://github.com/try-git/try-git.git',
 			'11' => '-u origin master',
-			'11' => 'origin master',
-			'12' => 'HEAD',
-			'13' => 'octofamily/octodog.txt',
-			'14' => '--staged',
+			'12' => 'origin master',
+			'13' => 'HEAD',
+			'14' => 'octofamily/octodog.txt',
+			'15' => '--staged',
 			'16' => 'octofamily/octodog.txt',
 			'17' => '-- octocat.txt',
 			'18' => 'clean_up',
@@ -68,7 +68,7 @@ class Git {
 			'22' => 'master',
 			'23' => 'clean_up',
 			'24' => '-d clean_up',
-			'25' => ''
+			'25' => false
 		);
 	}
 
@@ -119,8 +119,8 @@ class Git {
 						# <br/>
 						# Initial commit <br/>
 						# <br/>
-                    nothing to commit (create/copy files and use "git add" 
-                    to track) <br/>
+                        nothing to commit (create/copy files and use "git add" 
+                        to track) <br/>
 
 						<span class="success" >Success!</span>
 					</p>

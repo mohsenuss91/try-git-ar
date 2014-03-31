@@ -157,14 +157,20 @@ class CommandLine extends Git {
 	 * @return {bool}
 	 * @author Hachem Zerdia
 	 **/
-	private function checkCommand($command,$numOfChallenge) {
-        if ($command[0] == 'git' && 
-            $command[1] == $this->gitCommands[$numOfChallenge] &&
-            $command[2] == $this->gitFlags[$numOfChallenge]) {
+    private function checkCommand($command,$numOfChallenge) {
+
+        $isGit = ($command[0] === 'git') ? true : false;
+
+        $isGitCommand = ($command[1] === $this->gitCommands[$numOfChallenge])
+            ? true : false;
+
+        $isGitFlag = (isset($command[2]) === $this->gitFlags[$numOfChallenge])
+            ? true : false;
+
+        if ($isGit && $isGitCommand && $isGitFlag)
 			return true;
-		} else {
+		else 
 			return false;
-		}
 	}
 
 	/**
