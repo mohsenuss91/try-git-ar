@@ -46,10 +46,10 @@
 				<li><a href="javascript:;" data-num-of-challenge="19"> </a></li>
 				<li><a href="javascript:;" data-num-of-challenge="20"> </a></li>
 				<li><a href="javascript:;" data-num-of-challenge="21"> </a></li>
+				<li><a href="javascript:;" data-num-of-challenge="22"> </a></li>
 				<li><a href="javascript:;" data-num-of-challenge="23"> </a></li>
 				<li><a href="javascript:;" data-num-of-challenge="24"> </a></li>
 				<li><a href="javascript:;" data-num-of-challenge="25"> </a></li>
-				<li><a href="javascript:;" data-num-of-challenge="26"> </a></li>
 			</ul>
             <div id="challengeName">
             </div>
