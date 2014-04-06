@@ -19,6 +19,6 @@
         // get document of challenge && return it as JSON object
         $doc = new Documentation();
         $docs['docOfChallenge'] = $doc->getDoc($numOfChallenge);
-	    echo json_encode($docs);
+        echo json_encode($docs);
     }
 
