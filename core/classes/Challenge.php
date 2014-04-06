@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * This is Challenge class. 
  *
