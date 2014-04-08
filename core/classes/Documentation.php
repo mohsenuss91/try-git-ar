@@ -15,8 +15,7 @@ class Documentation {
 
 	public function __construct() {
 		$this->Docs = array(
-			'1' => BASE_PATH . '/docs/initializing.html',
-			'2' => BASE_PATH . ''
+			'1' => BASE_PATH . '/docs/initializing.php',
 		);
 	}
 
@@ -28,10 +27,18 @@ class Documentation {
 	 * @author Hachem Zerdia
 	 **/
 	public function getDoc($numOfChallenge) {
-        if (!empty($this->Docs[$numOfChallenge]))
-		    return file_get_contents($this->Docs[$numOfChallenge]);
-        else
+        if (!empty($this->Docs[$numOfChallenge])) {
+		    //return file_get_contents($this->Docs[$numOfChallenge]);
+            ob_start();
+
+            require_once $this->Docs[$numOfChallenge];
+            $doc = ob_get_contents();
+            ob_end_clean();
+
+            return $doc;
+        } else {
             return null;
+        }
 	}
 
 	function __destruct() {
