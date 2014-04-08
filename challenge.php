@@ -9,8 +9,8 @@
     $answer = $_POST['command'];
 
     // get number or challenge status from cookies.
-	$numOfChallenge = (int) $_COOKIE['numOfChallenge'];
+    $numOfChallenge = (int) $_COOKIE['numOfChallenge'];
     
     // run challage && print result (json format). 
-	echo json_encode($challenge->startChallenge($answer,$numOfChallenge));
+    echo json_encode($challenge->startChallenge($answer,$numOfChallenge));
 

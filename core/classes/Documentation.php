@@ -11,7 +11,7 @@ class Documentation {
     // array of files ~ paths (docs)
     // exmple :
     //    '1' => '../docs/initializing.html' 
-	private $Docs = NULL;
+    private $Docs = NULL;
 
 	public function __construct() {
 		$this->Docs = array(
@@ -41,8 +41,8 @@ class Documentation {
         }
 	}
 
-	function __destruct() {
-		$this->Docs = NULL;
-	}
+    function __destruct() {
+        $this->Docs = NULL;
+    }
 
 } // END class Documentation
