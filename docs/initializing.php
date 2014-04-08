@@ -1,3 +1,4 @@
 <div id="doc-template">
-    <p>Challenge N° 1</p>	
+    <p> <?php echo _("Hello"); ?> </p>	
+    <p> <?php echo _(" smile :)"); ?> </p>	
 </div>
