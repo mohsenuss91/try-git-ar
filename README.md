@@ -19,7 +19,7 @@ TRANSLATE
 You can help us to translate try git.
 - Download Poedit or any other application that works with gettext.
 - write documents of our site for every challenge like initializing.php
-    copy it from www.try.github.com in En
+    copy it from try.github.com in En
 - Use `_()` or `gettext()` function to echo it.
 - Open toArabic.po file with Poedit and translate the contents to Ar.
 
