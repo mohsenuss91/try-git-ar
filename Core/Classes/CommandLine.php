@@ -2,7 +2,7 @@
 
 namespace Core\Classes;
 
-use Git;
+use Core\Classes\Git;
 
 /**
  * This class simulates command line functionality.

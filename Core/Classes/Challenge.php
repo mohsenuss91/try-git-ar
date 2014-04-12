@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\Classes\Challenge;
+namespace Core\Classes;
 
-use CommandLine;
-use Documentation;
+use Core\Classes\CommandLine;
+use Core\Classes\Documentation;
 
 /**
  * This is Challenge class. 
