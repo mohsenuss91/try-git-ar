@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Classes;
+
 /**
  * This class describe Git (commands,command results).
  *

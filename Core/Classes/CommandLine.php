@@ -1,5 +1,9 @@
 <?php
 
+namespace Core\Classes;
+
+use Core\Classes\Git;
+
 /**
  * This class simulates command line functionality.
  *

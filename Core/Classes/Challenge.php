@@ -1,5 +1,10 @@
 <?php
 
+namespace Core\Classes\Challenge;
+
+use Core\Classes\CommandLine;
+use Core\Classes\Documentation;
+
 /**
  * This is Challenge class. 
  *
@@ -13,8 +18,8 @@ class Challenge {
     private $doc = NULL;
 
     public function __construct() {
-        $this->commandline = new CommandLine();
-        $this->doc = new Documentation();
+        $this->commandline = new CommandLine;
+        $this->doc = new Documentation;
     }
 
     /**

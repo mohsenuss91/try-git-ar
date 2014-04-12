@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Classes;
+
 /**
  * This is Documentation calss.
  *

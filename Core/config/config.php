@@ -27,4 +27,4 @@ textdomain(DOMAIN);
  ***********************************************/
 
 define('BASE_PATH', realpath('./'));
-define('CORE_APP', realpath("./")."/core");
+define('CORE_APP', realpath("./")."/Core");

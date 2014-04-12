@@ -6,7 +6,7 @@
      * @file changeChallenge.php
      */    
 
-    include_once 'core/init.php';
+    include_once 'Core/init.php';
     // num of challenge submitted.    
     $numOfChallenge = (int) $_POST['numOfChallenge'];
     
@@ -17,7 +17,7 @@
         setcookie('numOfChallenge',$numOfChallenge,$expire);
         
         // get document of challenge && return it as JSON object
-        $doc = new Documentation();
+        $doc = new \Core\Classes\Documentation();
         $docs['docOfChallenge'] = $doc->getDoc($numOfChallenge);
         echo json_encode($docs);
     }
