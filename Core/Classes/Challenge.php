@@ -2,8 +2,8 @@
 
 namespace Core\Classes\Challenge;
 
-use Core\Classes\CommandLine;
-use Core\Classes\Documentation;
+use CommandLine;
+use Documentation;
 
 /**
  * This is Challenge class. 
