@@ -188,8 +188,11 @@ class CommandLine extends Git {
      * @author Hachem Zerdia
      **/
     private function updateStatus() {
-        $expire = (time() + 60 * 60 * 2); // 2h.
-        setcookie('numOfChallenge',$_COOKIE['numOfChallenge'] + 1,$expire);
+
+        if(isset($_COOKIE['numOfChallenge'])) {
+            $expire = (time() + 60 * 60 * 2); // 2h.
+            setcookie('numOfChallenge',$_COOKIE['numOfChallenge'] + 1,$expire);
+        }
     }
 
 } // END class CommandLine
