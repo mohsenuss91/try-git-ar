@@ -10,10 +10,16 @@ use Core\Classes\Git;
  * @packaged default
  * @author Hachem Zerdia
  **/
-class CommandLine extends Git {
+class CommandLine {
+
+    private $git         = NULL;
+    private $gitCommands = NULL;
+    private $gitFlags    = NULL;
 
     public function __construct() {
-            parent::__construct();
+        $this->git         = new Git();
+        $this->gitCommands = $this->git->getGitCommands();
+        $this->gitFlags    = $this->git->getGitFlags();
     }
 
     /**
@@ -36,103 +42,103 @@ class CommandLine extends Git {
             switch ($numOfChallenge) {
             case 1: 
                 $this->updateStatus();
-                return $this->init($numOfChallenge);
+                return $this->git->init($numOfChallenge);
                 break;
             case 2:
                 $this->updateStatus();
-                return $this->status($numOfChallenge);
+                return $this->git->status($numOfChallenge);
                 break;
             case 3:
                 $this->updateStatus();
-                return $this->status($numOfChallenge);
+                return $this->git->status($numOfChallenge);
                 break;
             case 4:
                 $this->updateStatus();
-                return $this->add($numOfChallenge);
+                return $this->git->add($numOfChallenge);
                 break;
             case 5:
                 $this->updateStatus();
-                return $this->status($numOfChallenge);
+                return $this->git->status($numOfChallenge);
                 break;
             case 6:
                 $this->updateStatus();
-                return $this->commit($numOfChallenge);
+                return $this->git->commit($numOfChallenge);
                 break;
             case 7:
                 $this->updateStatus();
-                return $this->add($numOfChallenge);
+                return $this->git->add($numOfChallenge);
                 break;
             case 8:
                 $this->updateStatus();
-                return $this->commit($numOfChallenge);
+                return $this->git->commit($numOfChallenge);
                 break;
             case 9:
                 $this->updateStatus();
-                return $this->log($numOfChallenge);
+                return $this->git->log($numOfChallenge);
                 break;
             case 10:
                 $this->updateStatus();
-                return $this->remote($numOfChallenge);
+                return $this->git->remote($numOfChallenge);
                 break;
             case 11:
                 $this->updateStatus();
-                return $this->push($numOfChallenge);
+                return $this->git->push($numOfChallenge);
                 break;
             case 12:
                 $this->updateStatus();
-                return $this->pull($numOfChallenge);
+                return $this->git->pull($numOfChallenge);
                 break;
             case 13:
                 $this->updateStatus();
-                return $this->diff($numOfChallenge);
+                return $this->git->diff($numOfChallenge);
                 break;
             case 14:
                 $this->updateStatus();
-                return $this->add($numOfChallenge);
+                return $this->git->add($numOfChallenge);
                 break;
             case 15:
                 $this->updateStatus();
-                return $this->diff($numOfChallenge);
+                return $this->git->diff($numOfChallenge);
                 break;
             case 16:
                 $this->updateStatus();
-                return $this->reset($numOfChallenge);
+                return $this->git->reset($numOfChallenge);
                 break;
             case 17:
                 $this->updateStatus();
-                return $this->checkout($numOfChallenge);
+                return $this->git->checkout($numOfChallenge);
                 break;
             case 18:
                 $this->updateStatus();
-                return $this->branch($numOfChallenge);
+                return $this->git->branch($numOfChallenge);
                 break;
             case 19:
                 $this->updateStatus();
-                return $this->checkout($numOfChallenge);
+                return $this->git->checkout($numOfChallenge);
                 break;
             case 20:
                 $this->updateStatus();
-                return $this->rm($numOfChallenge);
+                return $this->git->rm($numOfChallenge);
                 break;
             case 21:
                 $this->updateStatus();
-                return $this->commit($numOfChallenge);
+                return $this->git->commit($numOfChallenge);
                 break;
             case 22:
                 $this->updateStatus();
-                return $this->checkout($numOfChallenge);
+                return $this->git->checkout($numOfChallenge);
                 break;
             case 23:
                 $this->updateStatus();
-                return $this->merge($numOfChallenge);
+                return $this->git->merge($numOfChallenge);
                 break;
             case 24:
                 $this->updateStatus();
-                return $this->branch($numOfChallenge);
+                return $this->git->branch($numOfChallenge);
                 break;
             case 25:
                 $this->updateStatus();
-                return $this->push($numOfChallenge);
+                return $this->git->push($numOfChallenge);
                 break;
             }
 

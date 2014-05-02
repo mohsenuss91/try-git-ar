@@ -12,9 +12,9 @@ namespace Core\Classes;
 class Git {
     
     // array of git commands.
-    protected $gitCommands = NULL;
+    private $gitCommands = NULL;
     // array of git flags. 
-    protected $gitFlags = NULL;
+    private $gitFlags    = NULL;
 
     public function __construct() {
         $this->gitCommands = array(
@@ -74,6 +74,25 @@ class Git {
         );
     }
 
+    /**
+     * This function return git commands. 
+     *
+     * @return {string:array} commands.
+     * @author Hachem Zerdia
+     **/
+    public function getGitCommands() {
+        return $this->gitCommands;
+    }
+
+    /**
+     * This function return git flags of commands. 
+     *
+     * @return {string:array} flags of commands.
+     * @author Hachem Zerdia
+     **/
+    public function getGitFlags() {
+        return $this->gitFlags;
+    }
 
     /**
      * This function exec when run "git init" command and 
