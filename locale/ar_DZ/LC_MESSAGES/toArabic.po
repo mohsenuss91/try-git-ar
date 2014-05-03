@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: try-git-ar\n"
-"POT-Creation-Date: 2014-04-08 20:10-0000\n"
-"PO-Revision-Date: 2014-04-08 20:36-0000\n"
+"POT-Creation-Date: 2014-05-03 15:48-0000\n"
+"PO-Revision-Date: 2014-05-03 20:00-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabicgit-team <arabicgit@gmail.com>\n"
 "Language: ar_DZ\n"
@@ -16,12 +16,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../../..\n"
 
 #: ../../../docs/initializing.php:2
-msgid "Hello"
-msgstr "مرحبا"
+msgid "Got 15 minutes and want to learn Git?"
+msgstr "لديك 15 دقيقة و تريد تعلم Git"
 
-#: ../../../docs/initializing.php:3
-msgid " smile :)"
-msgstr "ابتسامة :)"
+#: ../../../docs/initializing.php:5
+msgid ""
+"Git allows groups of people to work on the same documents (often code) at\n"
+"            the same time, and without stepping on each other's toes. It's a "
+"distributed\n"
+"            version control system."
+msgstr ""
+"Git يسمح لعدد من الاشخاص العمل على نفس المستند (في الغالب شيفرة مصدرية) في "
+"نفس الوقت, بدون الدوس على اصابعنا البعض. هو نظام موزع لتحكم في الاصدارات."
+
+#: ../../../docs/initializing.php:10
+msgid ""
+"Our terminal prompt below is currently in an <code>octobox</code> "
+"directory.\n"
+"            To initialize a Git repository here, type the following command:"
+msgstr ""
+"لدينا طرفية في الاسفل في المجلد<code> octobox </code>. لتهيئة مستودع لـ Git "
+"هنا. اكتب الامر التالي :"
+
+#~ msgid "Hello"
+#~ msgstr "مرحبا"
+
+#~ msgid " smile :)"
+#~ msgstr "ابتسامة :)"
 
 #~ msgid "Challenge N° 1"
 #~ msgstr "مرحبا"
