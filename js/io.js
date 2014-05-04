@@ -90,6 +90,18 @@ function isGitCommand(command) {
     else
         return false;
 }
+/**
+ * This function get command in the documentation and put it in the command 
+ * line. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function promptCommand() {
+    $('.input-command').on('click',function(){
+        window.cs_console.setValue($.trim($(this).html()));
+        window.cs_console.focus();
+    });
+}
 
 /**
  * This IO class.

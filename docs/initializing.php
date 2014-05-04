@@ -14,7 +14,7 @@
             To initialize a Git repository here, type the following command:"); ?>
         </p>
         <p>
-            <code class="input-command"> > git init</code>
+            <code class="input-command">git init</code>
         </p>
     </div>
 </div>

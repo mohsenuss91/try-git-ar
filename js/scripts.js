@@ -63,5 +63,8 @@ $(document).ready(function(){
                 report({content: (content ? content.toString() : '')})
            }
         });
+
+    // put commands in the terminal, (commands in the documentation).
+    promptCommand();
 });
 
