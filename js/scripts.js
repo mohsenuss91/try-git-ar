@@ -1,70 +1,105 @@
-$(document).ready(function(){
-    var challenge_ = $('#challengeStatus li a');
-	var ioObject = new IO(); // create IO obeject.
-    updateBar();
-    
-    // when the mouse over the cercl of challenge.
-    challenge_.hover(function() {
-            // get number of challenge.
-            var numOfChallenge  = $(this).data('num-of-challenge');
-            // show the name of challenge in the challenge name.
-            updateChallengeName(numOfChallenge);
-        },
-        function() {
-            // and if the mouse is out name of challenge become 
-            // the current challenge.
-            updateChallengeName_(); 
+
+/**
+ * This is an object store (challenge names). 
+ * PS: challenge name should be in arabic.
+ * @author Hachem Zerdia
+ **/
+var challengeName = {
+    1 : "Initializing",
+    2 : "Checking the Status"
+}
+
+/**
+ * This function updating challenge name. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function updateChallengeName_() {
+	var numOfChallenge = ($.cookies.get("numOfChallenge"));
+    var nameOfChallenge = '<p>' + challengeName[numOfChallenge] + '</p>';
+    $('#challengeName').html(nameOfChallenge);
+}
+
+/**
+ * This function updating challenge name. 
+ * @param numOfChallenge {int} number of challenge.
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function updateChallengeName(numOfChallenge) {
+	var numOfChallenge_ = numOfChallenge;
+    var nameOfChallenge = '<p>' + challengeName[numOfChallenge_] + '</p>';
+    $('#challengeName').html(nameOfChallenge);
+}
+
+/**
+ * This function updating challenge status bar. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function challengeStatus() {
+	var numOfChallenge = ($.cookies.get("numOfChallenge"));
+	for (i = 0; i < 26; i++) {
+        if(i < numOfChallenge)
+    		$('#challengeStatus li:eq('+i+') a')
+                .css("background-color","rgba(0,0,0,0.3)");
+        else
+    		$('#challengeStatus li:eq('+i+') a')
+                .css("background-color","rgba(255,255,255,1)");
+	}
+}
+
+/**
+ * This function updating status && name of challenge in the top bar. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function updateBar() {
+    updateChallengeName_(); 
+    challengeStatus();
+}
+
+/**
+ * This function change challenge && updating status bar (num of challenge) 
+ * && the documentation. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function changeChallenge(numOfChallenge_) {
+    $.ajax({
+        type: "POST",
+        url: "changeChallenge.php",
+        data: {numOfChallenge:numOfChallenge_},
+        dataType: "json",
+        success: function(data) {
+            updateBar();
+            var documentation = data["docOfChallenge"];   
+		    $('#documentation').html(documentation);  
+        }  
     });
+}
 
-    // when the cercle clicked the challenge changed.
-    challenge_.click(function() {
-        var numOfChallenge = $(this).data('num-of-challenge');
-        changeChallenge(numOfChallenge);
+/**
+ * This function check if the command is git command.
+ * @return boolean
+ * @author Hachem Zerdia
+ **/
+function isGitCommand(command) {
+    var splitCommand = command.split(' ');
+    if(splitCommand[0] === 'git')
+        return true;
+    else
+        return false;
+}
+/**
+ * This function get command in the documentation and put it in the command 
+ * line. 
+ * @return void
+ * @author Hachem Zerdia
+ **/
+function promptCommand() {
+    $('.input-command').on('click',function(){
+        window.cs_console.setValue($.trim($(this).html()));
+        window.cs_console.focus();
     });
-
-    /**
-     * Generate CodeMirror and apply it to #terminal element
-     */
-    var el = document.getElementById('terminal');
-          window.cs_console = new CSConsole(el,{
-              prompt: '> ',
-              historyLabel: 'cs-console-git',
-              syntax: 'shell',
-              welcomeMessage: 'Git باللغة العربية!',
-              autoFocus: true,
-              commandValidate: function(line){
-                return line.length > 0
-              },
-              commandHandle: function(line, report, prompt){
-                /*
-                 *  We aren't doing anything with the console input.
-                 *
-                 *  This is where you might send the input to the server and get a response
-                 *  for example, an irb response or you could eval javascript here.
-                 *                                               
-                 */
-                try {
-
-                    var valueOfCommand = $.trim(line); // delete "space character".
-                    // check if the command is Git comand
-                    // else run cs_console like js console
-                    if(isGitCommand(valueOfCommand)) {
-                        // send command to the server for test it.
-                        ioObject.inputCommand(valueOfCommand);
-                        // get the result come in from the server.
-                        var content = ioObject.getResult();
-                    } else {
-                        var content = eval.call(this,line);
-                    }
-
-                } catch(e){
-                   var content = e.message
-                }
-                report({content: (content ? content.toString() : '')})
-           }
-        });
-
-    // put commands in the terminal, (commands in the documentation).
-    promptCommand();
-});
-
+}

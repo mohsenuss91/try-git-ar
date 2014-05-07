@@ -11,7 +11,7 @@
     $numOfChallenge = (int) $_POST['numOfChallenge'];
     
     // check if num of challenge is valid.
-    if(!empty($numOfChallenge) && $numOfChallenge <= 26) { 
+    if(!empty($numOfChallenge) && $numOfChallenge <= 25) { 
         // set num of challenge in the cookies.
         $expire = time() + 60 * 60 * 2; // 2h.
         setcookie('numOfChallenge',$numOfChallenge,$expire);

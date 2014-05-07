@@ -76,6 +76,6 @@
 	<script src="js/lib/cs_console.js"></script>
 	<script src="js/io.js"></script>
 	<script src="js/scripts.js"></script>
-
+    <script src="js/mainScript.js"></script>
 </body
 </html>
