@@ -8,7 +8,7 @@ use Core\Classes\Documentation;
 /**
  * This is Challenge class. 
  *
- * @packaged default
+ * @package default
  * @author Hachem Zerdia
  **/
 class Challenge {
