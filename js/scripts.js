@@ -75,6 +75,9 @@ function changeChallenge(numOfChallenge_) {
             updateBar();
             var documentation = data["docOfChallenge"];   
 		    $('#documentation').html(documentation);  
+
+            // put commands in the terminal, (commands in the documentation).
+            promptCommand();
         }  
     });
 }
@@ -98,7 +101,7 @@ function isGitCommand(command) {
  * @author Hachem Zerdia
  **/
 function promptCommand() {
-    $('.input-command').on('click',function(){
+    $('.input-command').on('click',function() {
         window.cs_console.setValue($.trim($(this).html()));
         window.cs_console.focus();
     });

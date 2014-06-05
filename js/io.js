@@ -47,8 +47,11 @@ function IO() {
 	 * @author Hachem Zerdia
 	 **/
 	this.showDocumentation = function showDocumentation() {
-		$('#documentation').html(this.Documentation);  
+		$('#documentation').html(this.Documentation);
         updateBar();
+
+        // put commands in the terminal, (commands in the documentation).
+        promptCommand();
 	}
 
 	/**
