@@ -1,6 +1,6 @@
 <div id="doc-template">
     <h1>
-        <em><?php echo (isset($_COOKIE['numOfChallenge'])) ? $_COOKIE['numOfChallenge'] : 1 ;  ?>.</em> 
+        <em>1.</em> 
         <?php echo _("Got 15 minutes and want to learn Git?"); ?>
     </h1>
     <div id="challenge-descroption">
