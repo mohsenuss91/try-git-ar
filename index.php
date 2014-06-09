@@ -62,6 +62,7 @@
 				<div name="terminal" id="terminal"></div>
 				<div id="tips">
 					<div id="advice" >
+                        <?php include_once 'advice.php'; ?>
 					</div>
 				</div>
 			</div>
