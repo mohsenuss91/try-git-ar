@@ -16,11 +16,7 @@ class Advice {
 
         $this->urlAdvices = array(
             1 => array(
-                '<a target="_blank" href="http://www.arabicgit.com/">Git بالعربي</a>'
-            ),
-
-            3 => array(
-                '<a target="_blank" href="http://www.arabicgit.com/">3</a>'
+                '<a target="_blank" href="http://www.arabicgit.com/">موقع Git بالعربي</a>'
             ),
         );
     }
@@ -33,6 +29,9 @@ class Advice {
      * @author Hachem Zerdia
      **/
     public function getAdvices($numOfChallenge) {
+        // for now, we change it in the futur.
+        $numOfChallenge = 1;
+
 
         if($numOfChallenge > 25 || $numOfChallenge < 1)
             return false;
