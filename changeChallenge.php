@@ -6,7 +6,7 @@
      * @file changeChallenge.php
      */    
 
-    include_once 'Core/init.php';
+    include_once 'core/init.php';
     // num of challenge submitted.    
     $numOfChallenge = (int) $_POST['numOfChallenge'];
     

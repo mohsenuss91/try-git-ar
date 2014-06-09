@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'Core/init.php';
+    include_once 'core/init.php';
 
     // create challenge object.
     $challenge = new \Core\Classes\Challenge;

@@ -1,5 +1,5 @@
 <?php 
-    include_once 'Core/init.php';
+    include_once 'core/init.php';
     $advices = new Core\Classes\Advice;
     $numOfChallenge = (isset($_COOKIE['numOfChallenge'])) ?
         (int) $_COOKIE['numOfChallenge'] : 1;

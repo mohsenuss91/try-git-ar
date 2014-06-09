@@ -1,6 +1,6 @@
 <?php
 
-require realpath('./') . '/Core/init.php';
+require realpath('./') . '/core/init.php';
 
 class TestDocumentation extends PHPUnit_Framework_TestCase {
 
