@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: try-git-ar\n"
-"POT-Creation-Date: 2014-05-03 15:48-0000\n"
-"PO-Revision-Date: 2014-05-03 20:17-0000\n"
+"POT-Creation-Date: 2014-06-10 17:16-0000\n"
+"PO-Revision-Date: 2014-06-10 20:18-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabicgit-team <arabicgit@gmail.com>\n"
 "Language: ar_DZ\n"
@@ -15,11 +15,31 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../docs/initializing.php:2
+#: ../../../docs/checkingStatus.php:4
+msgid "Checking the Status"
+msgstr "التحقق من الحالة"
+
+#: ../../../docs/checkingStatus.php:8
+msgid ""
+"Good job! As Git just told us, our \"octobox\" \n"
+"            directory now has an empty repository in /.git/. The "
+"repository \n"
+"            is a hidden directory where Git operates."
+msgstr ""
+"عمل جيد, لقد اخبرنا Git بان مجلدنا \"octobox\" لديه مستودع فارغ في /git./ و "
+"محجوب حيث تسجل عمليات Git."
+
+#: ../../../docs/checkingStatus.php:13
+msgid ""
+"Next up, let's type the git status command to see \n"
+"            what the current state of our project is:"
+msgstr "وبعد, لنكتب الامر git status لمعرفة حالة المشروع."
+
+#: ../../../docs/initializing.php:4
 msgid "Got 15 minutes and want to learn Git?"
 msgstr "لديك 15 دقيقة و تريد تعلم Git ؟"
 
-#: ../../../docs/initializing.php:5
+#: ../../../docs/initializing.php:8
 msgid ""
 "Git allows groups of people to work on the same documents (often code) at\n"
 "            the same time, and without stepping on each other's toes. It's a "
@@ -29,7 +49,7 @@ msgstr ""
 "Git يسمح لعدد من الاشخاص العمل على نفس المستند (في الغالب شيفرة مصدرية) في "
 "نفس الوقت, بدون الدوس على اصابعنا البعض. هو نظام موزع لتحكم في الاصدارات."
 
-#: ../../../docs/initializing.php:10
+#: ../../../docs/initializing.php:13
 msgid ""
 "Our terminal prompt below is currently in an <code>octobox</code> "
 "directory.\n"
