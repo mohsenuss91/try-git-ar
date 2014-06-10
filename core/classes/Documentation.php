@@ -18,6 +18,7 @@ class Documentation {
 	public function __construct() {
 		$this->Docs = array(
 			'1' => BASE_PATH . '/docs/initializing.php',
+			'2' => BASE_PATH . '/docs/checkingStatus.php',
 		);
 	}
 
