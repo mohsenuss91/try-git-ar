@@ -19,6 +19,7 @@ class Documentation {
 		$this->Docs = array(
 			'1' => BASE_PATH . '/docs/initializing.php',
 			'2' => BASE_PATH . '/docs/checkingStatus.php',
+			'3' => BASE_PATH . '/docs/addingAndCommitting.php',
 		);
 	}
 

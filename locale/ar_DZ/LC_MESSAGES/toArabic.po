@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: try-git-ar\n"
-"POT-Creation-Date: 2014-06-10 17:16-0000\n"
-"PO-Revision-Date: 2014-06-10 20:18-0000\n"
+"POT-Creation-Date: 2014-06-11 20:36-0000\n"
+"PO-Revision-Date: 2014-06-11 20:43-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabicgit-team <arabicgit@gmail.com>\n"
 "Language: ar_DZ\n"
@@ -14,6 +14,24 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
+
+#: ../../../docs/addingAndCommitting.php:4
+msgid "Adding & Committing"
+msgstr "الاضافة & الايداع"
+
+#: ../../../docs/addingAndCommitting.php:8
+msgid ""
+"I created a file called octocat.txt in the octobox \n"
+"            repository for you (as you can see in the browser below)."
+msgstr "انشأت ملف اسمه <b>octocat.txt </b> في المستودع octobox من اجلك. "
+
+#: ../../../docs/addingAndCommitting.php:12
+msgid ""
+"You should run the git status command again to see \n"
+"            how the repository status has changed:"
+msgstr ""
+"و الان يجب عليك تنفيد الامر <b> git status </b> مرة اخرى لترى بان حالة "
+"المستودع تغيرت."
 
 #: ../../../docs/checkingStatus.php:4
 msgid "Checking the Status"
