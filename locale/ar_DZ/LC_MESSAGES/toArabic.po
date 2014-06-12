@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: try-git-ar\n"
-"POT-Creation-Date: 2014-06-11 20:36-0000\n"
-"PO-Revision-Date: 2014-06-11 20:43-0000\n"
+"POT-Creation-Date: 2014-06-12 14:15-0000\n"
+"PO-Revision-Date: 2014-06-12 14:24-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabicgit-team <arabicgit@gmail.com>\n"
 "Language: ar_DZ\n"
@@ -14,6 +14,30 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
+
+#: ../../../docs/addingChanges.php:4
+msgid "Adding Changes"
+msgstr "اضافة التغييرات"
+
+#: ../../../docs/addingChanges.php:8
+msgid ""
+"Good, it looks like our Git repository is working \n"
+"            properly. Notice how Git says octocat.txt is \"untracked\"? "
+"That \n"
+"            means Git sees that octocat.txt is a new file."
+msgstr ""
+"جيد, يبدو ان مستودع Git الخاص بنا يعمل يصورة جيدة. لاحظ ان Git يقول بان <b> "
+"octocat.txt </b> غير متعقب و هدا يعني ان <b> octocat.txt </b> هو ملف جديد."
+
+#: ../../../docs/addingChanges.php:13
+msgid ""
+"To tell Git to start tracking changes made to \n"
+"            octocat.txt, we first need to add it to the staging area by "
+"using \n"
+"            git add."
+msgstr ""
+"لاخبار Git بتتبع التغيرات في <b> octocat.txt </b>, اولا يجب علينا اضافة "
+"الملف الى منطقة التحضير باستعمال الامر <b> git add </b>"
 
 #: ../../../docs/addingAndCommitting.php:4
 msgid "Adding & Committing"
