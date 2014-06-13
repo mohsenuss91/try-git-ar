@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: try-git-ar\n"
-"POT-Creation-Date: 2014-06-12 14:15-0000\n"
-"PO-Revision-Date: 2014-06-12 14:24-0000\n"
+"POT-Creation-Date: 2014-06-13 18:38-0000\n"
+"PO-Revision-Date: 2014-06-13 18:43-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabicgit-team <arabicgit@gmail.com>\n"
 "Language: ar_DZ\n"
@@ -76,6 +76,18 @@ msgid ""
 "Next up, let's type the git status command to see \n"
 "            what the current state of our project is:"
 msgstr "وبعد, لنكتب الامر git status لمعرفة حالة المشروع."
+
+#: ../../../docs/checkingForChanges.php:4
+msgid "Checking for Changes"
+msgstr "التحقق من التغييرات"
+
+#: ../../../docs/checkingForChanges.php:8
+msgid ""
+"Good job! Git is now tracking our octocat.txt file. \n"
+"            Let's run git status again to see where we stand:"
+msgstr ""
+"عما جيد, الان Git يقوم بتتبع ملفنا <b> octocat.txt  </b>. لننفد الامر <b> "
+"git status </b> مرة اخرى لنرى اين وصلنا."
 
 #: ../../../docs/initializing.php:4
 msgid "Got 15 minutes and want to learn Git?"
