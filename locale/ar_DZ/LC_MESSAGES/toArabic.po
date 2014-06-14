@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: try-git-ar\n"
-"POT-Creation-Date: 2014-06-13 18:38-0000\n"
-"PO-Revision-Date: 2014-06-13 18:43-0000\n"
+"POT-Creation-Date: 2014-06-14 13:32-0000\n"
+"PO-Revision-Date: 2014-06-14 15:52-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabicgit-team <arabicgit@gmail.com>\n"
 "Language: ar_DZ\n"
@@ -57,6 +57,32 @@ msgstr ""
 "و الان يجب عليك تنفيد الامر <b> git status </b> مرة اخرى لترى بان حالة "
 "المستودع تغيرت."
 
+#: ../../../docs/addingAllChanges.php:4
+msgid "Adding All Changes"
+msgstr "اضافة جميع التغييرات"
+
+#: ../../../docs/addingAllChanges.php:8
+msgid ""
+"Great! You also can use wildcards if you want to add \n"
+"            many files of the same type. Notice that I've added a bunch of ."
+"txt\n"
+"            files into your directory below."
+msgstr ""
+"جيد جدا, يمكننك ايضا استخدام wildcards ادا اردت اضافة العديد من الملفات من "
+"نفس النوع. لاحظ اني اضفت العديد من الملفات النصية .txt في المجلد الخاص بنا"
+
+#: ../../../docs/addingAllChanges.php:13
+msgid ""
+"I put some in a directory named \"octofamily\" and \n"
+"            some others ended up in the root of our \"octobox\" directory. \n"
+"            Luckily, we can add all the new files using a wildcard with "
+"git \n"
+"            add. Don't forget the quotes!"
+msgstr ""
+"وضعت القليل في مجلد اسمه \"octofamily\" و البقية في المجلد الجدر \"octobox"
+"\". نستطيع اضافة جميع الملفات باستخدام wildcard بالامر <b> git add </b>. ولا "
+"تنسى علامات الاقتباس ' '"
+
 #: ../../../docs/checkingStatus.php:4
 msgid "Checking the Status"
 msgstr "التحقق من الحالة"
@@ -88,6 +114,33 @@ msgid ""
 msgstr ""
 "عما جيد, الان Git يقوم بتتبع ملفنا <b> octocat.txt  </b>. لننفد الامر <b> "
 "git status </b> مرة اخرى لنرى اين وصلنا."
+
+#: ../../../docs/committing.php:4
+msgid "Committing"
+msgstr "الايداع"
+
+#: ../../../docs/committing.php:8
+msgid ""
+"Notice how Git says changes to be committed? The \n"
+"            files listed here are in the Staging Area, and they are not in "
+"our \n"
+"            repository yet. We could add or remove files from the stage "
+"before \n"
+"            we store them in the repository."
+msgstr ""
+"لاحظت كيف يخبرنا Git بان هناك تغييرات يجب ايداعها؟ وقائمة الملفات هنا هي في "
+"منطقة التحضير وليست في مستودعنا بعد وبهدا يمكننا اضافة او حدف ملفات من "
+"المنطقة قبل تخزينهم في منطقة التحضير."
+
+#: ../../../docs/committing.php:14
+msgid ""
+"To store our staged changes we run the commit command \n"
+"            with a message describing what we've changed. Let's do that now "
+"by \n"
+"            typing:"
+msgstr ""
+"لتخزين التغييرات بجب تنفيد الامر <b> commit </b> مع رسالة تصف التغييرات. "
+"لنقم بدلك الان بكتابة الامر التالي :"
 
 #: ../../../docs/initializing.php:4
 msgid "Got 15 minutes and want to learn Git?"
