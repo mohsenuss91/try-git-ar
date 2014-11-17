@@ -24,3 +24,13 @@ You can help us to translate try git.
 - Open toArabic.po file with Poedit and translate the contents to Ar.
 
 
+#جرب Git بالعربية
+#المدخل
+هذا المشروع يهدف لمساعدة مستعملي arabicgit.com لتعلم Git في المتصفح
+
+#التثبيت
+يمكنك مشاهدة العمل عبر استنساخ المستودع في  ملف www 
+
+#الترجمة
+يمكنكم مساعدتنا في ترجمة try git
+
